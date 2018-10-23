@@ -26,6 +26,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-tomcat:${rootProject.springBootVersion}")
     //  Get, Post Mapping 을 찾아낸다
     compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    // tiles 설정
+    compile("org.apache.tiles:tiles-jsp:3.0.8")
     testCompile("org.springframework.boot:spring-boot-starter-test:${rootProject.springBootVersion}")
 }
 

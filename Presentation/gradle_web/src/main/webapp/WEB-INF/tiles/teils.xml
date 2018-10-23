@@ -1,0 +1,10 @@
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <!-- 기본 레이아웃 템플릿 정의-->
+    <definition name="default_layout" template="/webapp/WEB-INF/views/default_layout.jsp">
+
+    </definition>
+</tiles-definitions>

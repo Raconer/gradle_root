@@ -17,10 +17,7 @@ public class MainController {
     MainService mainService;
 
     @GetMapping("/")
-    public String main(Model model){
-        System.out.println("DB_!");
-        model.addAttribute("listCnt", mainService.getListCnt());
-        System.out.println("DB_@");
+    public String main(){
         return "/main/main";
     }
 }

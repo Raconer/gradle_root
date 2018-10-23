@@ -35,8 +35,6 @@ public class MyBatisConfig {
     }
 }
 
-
-
 @Configuration
 @MapperScan(basePackages = MyBatisConfig.BASE_PACKAGE, annotationClass = DefaultMapper.class, sqlSessionFactoryRef = "masterSqlSessionFactory")
 class MasterMyBatisConfig extends MyBatisConfig {
