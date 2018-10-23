@@ -21,8 +21,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-        // Spring Boot 사용(없되_1)
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${rootProject.springBootVersion}")
+        // Spring Boot 사용
+        // subprojects의 apply plugin : 'org.springframework.boot'를 플러그인할때 사용한다.
+         classpath("org.springframework.boot:spring-boot-gradle-plugin:${rootProject.springBootVersion}")
     }
 }
 
