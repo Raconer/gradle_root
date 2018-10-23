@@ -1,3 +1,4 @@
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
 <%--
   Created by IntelliJ IDEA.
   User: dhokim
@@ -8,9 +9,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title><tiles:insertAttribute name="location"/></title>
 </head>
 <body>
-$END$
+    <%--<tiles:insertAttribute name="header"/>--%>
 </body>
 </html>

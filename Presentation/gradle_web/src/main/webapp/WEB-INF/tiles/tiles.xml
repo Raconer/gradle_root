@@ -4,7 +4,11 @@
 
 <tiles-definitions>
     <!-- 기본 레이아웃 템플릿 정의-->
-    <definition name="default_layout" template="/webapp/WEB-INF/views/default_layout.jsp">
+    <definition name="default_layout" template="/WEB-INF/views/default_layout.jsp">
 
+    </definition>
+
+    <definition name="main" extends="default_layout">
+        <put-attribute name="location" value="Main Title"/>
     </definition>
 </tiles-definitions>
