@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Business_test" target="1.8" />
+      <module name="Data_main" target="1.8" />
+      <module name="Data_test" target="1.8" />
+      <module name="gradle_root-Business_main" target="1.8" />
+      <module name="gradle_root-Business_test" target="1.8" />
+      <module name="gradle_root-gradle_bussiness_main" target="1.8" />
+      <module name="gradle_root-gradle_bussiness_test" target="1.8" />
+      <module name="gradle_root-gradle_web_main" target="1.8" />
+      <module name="gradle_root-gradle_web_test" target="1.8" />
+      <module name="gradle_root-Model_main" target="1.8" />
+      <module name="gradle_root-Model_test" target="1.8" />
+      <module name="gradle_root-Presentation_main" target="1.8" />
+      <module name="gradle_root-Presentation_test" target="1.8" />
+      <module name="gradle_root_main" target="1.8" />
+      <module name="gradle_root_test" target="1.8" />
+      <module name="gradle_web_main" target="1.8" />
+      <module name="gradle_web_test" target="1.8" />
+      <module name="Library-Business_main" target="1.8" />
+      <module name="Library-Business_test" target="1.8" />
+      <module name="Library-gradle_bussiness_main" target="1.8" />
+      <module name="Library-gradle_bussiness_test" target="1.8" />
+      <module name="Library-Model_main" target="1.8" />
+      <module name="Library-Model_test" target="1.8" />
+      <module name="Library_main" target="1.8" />
+      <module name="Library_test" target="1.8" />
+      <module name="Presentation-gradle_root-gradle_web_main" target="1.8" />
+      <module name="Presentation-gradle_root-gradle_web_test" target="1.8" />
+      <module name="Presentation-gradle_web_main" target="1.8" />
+      <module name="Presentation-gradle_web_main~1" target="1.8" />
+      <module name="Presentation-gradle_web_test" target="1.8" />
+      <module name="Presentation_main" target="1.8" />
+      <module name="Presentation_test" target="1.8" />
+      <module name="src_main" target="1.8" />
+      <module name="src_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

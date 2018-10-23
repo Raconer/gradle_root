@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="gradle_web:war exploded2">
+    <output-path>$PROJECT_DIR$/out/artifacts/gradle_web_war_exploded2</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="gradle_web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="gradle_web" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

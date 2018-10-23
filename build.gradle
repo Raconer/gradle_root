@@ -1,0 +1,56 @@
+group 'com.multi.gradle.module'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+/**
+  * 'run'은 application 플러그인에 제공되는 데스크이다
+  * application 플러그인을 사용하려면 mainClassName이 필요하다
+  **/
+// apply plugin: 'application'
+
+/**현재 프로젝트 그래들 설정*/
+buildscript {
+    ext {
+        javaVersion = 1.8
+        jstlVersion = 1.2
+        springBootVersion = "1.5.9.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        // Spring Boot 사용(없되_1)
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${rootProject.springBootVersion}")
+    }
+}
+
+/** gradle_root 프로젝트에 속해있는 모듈 기본 gradle 셋팅*/
+subprojects {
+    // Spring Boot의 핸들러
+    apply plugin: 'java'
+    // Spring BootRun 생성!
+    apply plugin: 'org.springframework.boot'
+
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+    /**
+      * sourceCompatibility : Java 소스를 컴파일 할때 사용할 Java 버전 호환성(즉. 소스의 java 언어 레벨)
+      * targetCompatibility : 클래스를 생성하는 Java 버전 호환성 (즉. 클래스의 Java언어 레벨)
+      **/
+    sourceCompatibility = rootProject.ext.javaVersion
+    targetCompatibility = rootProject.ext.javaVersion
+
+    dependencies {
+        // Spring boot 설정
+        // Starter 란 Spring의전 송과 설정을 자동화 해주는 모듈을 뜻한다.
+        compile("org.springframework.boot:spring-boot-starter-web:${rootProject.springBootVersion}")
+        compile("org.springframework.boot:spring-boot-configuration-processor:${rootProject.springBootVersion}")
+        compile 'org.hibernate:hibernate-validator'
+
+    }
+}

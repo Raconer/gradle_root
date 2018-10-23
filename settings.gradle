@@ -1,0 +1,16 @@
+rootProject.name = 'gradle_root'
+
+["Presentation", "Library"].each {
+    def tempDir = new File(rootDir, it)
+
+    if (!tempDir.exists()) {
+        tempDir.mkdirs()
+    }
+
+    tempDir.eachDir { dir ->
+        include ":${dir.name}"
+        project(":${dir.name}").projectDir = new File(tempDir.absolutePath, dir.name)
+    }
+
+}
+

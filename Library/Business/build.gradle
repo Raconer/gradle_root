@@ -1,0 +1,10 @@
+group 'com.multi.gradle.module'
+version '1.0-SNAPSHOT'
+
+bootRepackage{
+    enabled = false
+}
+
+dependencies {
+    compile project(":Data")
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":gradle_web" external.linked.project.path="$MODULE_DIR$/../../Presentation/gradle_web" external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.multi.gradle.module" external.system.module.version="1.0-SNAPSHOT" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../Presentation/gradle_web/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/../../Presentation/gradle_web/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <content url="file://$MODULE_DIR$/../../Presentation/gradle_web">
+      <excludeFolder url="file://$MODULE_DIR$/../../Presentation/gradle_web/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Presentation/gradle_web/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../Presentation/gradle_web/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

@@ -1,0 +1,31 @@
+group 'com.multi.gradle.module'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+
+buildscript {
+    repositories {
+        // dependency gradle_plugin에 필요
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${rootProject.springBootVersion}")
+
+    }
+}
+
+mainClassName = "com.multi.gradle.module.web.WebApplication"
+
+dependencies {
+    compile project(":Business")
+    /**
+     * Spring 설정및 tomcat 설정
+     **/
+    compile("org.springframework.boot:spring-boot-devtools:${rootProject.springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-tomcat:${rootProject.springBootVersion}")
+    //  Get, Post Mapping 을 찾아낸다
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${rootProject.springBootVersion}")
+}
+
