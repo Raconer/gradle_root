@@ -11,11 +11,11 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Model/Library-Model_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Model/Library-Model_main.iml" group="Model" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Model/Library-Model_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Model/Library-Model_test.iml" group="Model" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Model.iml" filepath="$PROJECT_DIR$/.idea/modules/Model.iml" group="Model" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Presentation/gradle_web/Presentation-gradle_web_main~1.iml" filepath="$PROJECT_DIR$/.idea/modules/Presentation/gradle_web/Presentation-gradle_web_main~1.iml" group="gradle_web" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_root.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_root.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_root_main.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_root_main.iml" group="gradle_root" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_root_test.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_root_test.iml" group="gradle_root" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle_web.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle_web.iml" group="gradle_web" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Presentation/gradle_web/gradle_web_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Presentation/gradle_web/gradle_web_main.iml" group="gradle_web" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Presentation/gradle_web/gradle_web_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Presentation/gradle_web/gradle_web_test.iml" group="gradle_web" />
     </modules>
   </component>

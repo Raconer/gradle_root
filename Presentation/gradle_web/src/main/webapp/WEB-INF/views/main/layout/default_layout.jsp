@@ -15,9 +15,9 @@
     <title><tiles:insertAttribute name="location"/></title>
     <script>
         $(document).ready(function(){
-            $("p").onclick(
-
-            );
+            $("p").click(function(){
+                $(this).hide();
+            });
         });
     </script>
 </head>
