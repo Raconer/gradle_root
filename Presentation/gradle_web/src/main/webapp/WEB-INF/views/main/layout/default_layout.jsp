@@ -14,7 +14,11 @@
 
     <title><tiles:insertAttribute name="location"/></title>
     <script>
+        $(document).ready(function(){
+            $("p").onclick(
 
+            );
+        });
     </script>
 </head>
 <body>
