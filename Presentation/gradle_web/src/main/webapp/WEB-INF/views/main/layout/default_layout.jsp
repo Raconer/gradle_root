@@ -1,4 +1,5 @@
 <%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: dhokim
@@ -9,9 +10,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <script src="<c:url value="/resource/js/lib/jquery-3.3.1.min.js"/>"></script>
+
     <title><tiles:insertAttribute name="location"/></title>
+    <script>
+
+    </script>
 </head>
 <body>
-    <%--<tiles:insertAttribute name="header"/>--%>
+<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
+${listCnt}
+<tiles:insertAttribute name="content"/>
 </body>
 </html>

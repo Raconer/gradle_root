@@ -1,14 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <!DOCTYPE tiles-definitions PUBLIC
         "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
         "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
     <!-- 기본 레이아웃 템플릿 정의-->
-    <definition name="default_layout" template="/WEB-INF/views/default_layout.jsp">
-
-    </definition>
+    <definition name="default_layout" template="/WEB-INF/views/main/layout/default_layout.jsp"/>
 
     <definition name="main" extends="default_layout">
         <put-attribute name="location" value="Main Title"/>
+        <put-attribute name="content" value="/WEB-INF/views/main/main/main.jsp"/>
     </definition>
 </tiles-definitions>

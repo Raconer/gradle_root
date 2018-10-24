@@ -4,10 +4,10 @@
     <facet type="web" name="Web">
       <configuration>
         <descriptors>
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../Presentation/gradle_web/web.xml" />
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../Presentation/gradle_web/src/main/webapp/WEB-INF/web.xml" />
         </descriptors>
         <webroots>
-          <root url="file://$MODULE_DIR$/../../Presentation/gradle_web/web" relative="/" />
+          <root url="file://$MODULE_DIR$/../../Presentation/gradle_web" relative="/WEB-INF" />
         </webroots>
       </configuration>
     </facet>
