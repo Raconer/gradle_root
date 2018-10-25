@@ -17,6 +17,12 @@ public class MainController {
     MainService mainService;
 
     @GetMapping("/")
+    public String test(Model model){
+
+        model.addAttribute("listCnt", mainService.getListCnt());
+        return "test";
+    }
+    @GetMapping("/main")
     public String main(Model model){
 
         model.addAttribute("listCnt", mainService.getListCnt());

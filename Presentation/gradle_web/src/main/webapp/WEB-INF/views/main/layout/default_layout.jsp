@@ -10,23 +10,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <script src="<c:url value="/resource/js/lib/jquery-3.3.1.min.js"/>"></script>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>taphold demo</title>
+        <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+        <script src="<c:url value="/resource/js/lib/jquery-3.3.1.min.js"/>"></script>
+        <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+        <link rel="stylesheet" href="<c:url value="/resource/css/contextmenu.css" />" type="text/css">
 
-    <title><tiles:insertAttribute name="location"/></title>
-    <script>
-        $(document).ready(function(){
-            $("p").click(function(){
-                $(this).hide();
-            });
-        });
-    </script>
 </head>
 <body>
-<p>If you click on me, I will disappear.</p>
-<p>Click me away!</p>
-<p>Click me too!</p>
-
-${listCnt}
 <tiles:insertAttribute name="content"/>
+<script type="text/javascript" src="<c:url value="/resource/js/contextmenu.js"/>"></script>
 </body>
 </html>

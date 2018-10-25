@@ -1,27 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
   User: dhokim
-  Date: 2018-10-19
-  Time: 오후 4:40
+  Date: 2018-10-25
+  Time: 오후 5:55
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-<p>If you click on me, I will disappear.</p>
-<p>Click me away!</p>
-<p>Click me too!</p>
-<style>
-    html, body { padding: 0; margin: 0; }
-    div.box {
-        width: 3em;
-        height: 3em;
-        background-color: #108040;
-    }
-</style>
-
-<h3>Long press the square for 750 milliseconds to see the above code applied:</h3>
-<div class="box"></div>
-
 <a>
     <img src="https://t1.daumcdn.net/cfile/tistory/99F56B475BBCCBED19"  />
 </a>
@@ -29,7 +12,7 @@
 
 <script>
     $(function(){
-        window.oncontextmenu = function (ev) {
+      /*  window.oncontextmenu = function (ev) {
             ev.preventDefault();
             ev.stopPropagation();
             return false;
