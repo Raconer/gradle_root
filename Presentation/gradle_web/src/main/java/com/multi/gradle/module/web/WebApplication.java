@@ -2,6 +2,8 @@ package com.multi.gradle.module.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -11,6 +13,9 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan({"com.multi.gradle.module.web", "com.multi.gradle.module.business"})
 public class WebApplication {
     public static void main(String[] args){
-        SpringApplication.run(WebApplication.class, args);
+       // SpringApplication.run(WebApplication.class, args);
+        SpringApplicationBuilder builder = new SpringApplicationBuilder(WebApplication.class);
+        builder.headless(false);
+        ConfigurableApplicationContext context = builder.run(args);
     }
 }
