@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.id=":gradle_web:main" external.linked.project.path="$MODULE_DIR$/../../../../Presentation/gradle_web" external.root.project.path="$MODULE_DIR$/../../../.." external.system.id="GRADLE" external.system.module.group="com.multi.gradle.module" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration />
+    </facet>
     <facet type="web" name="Web">
+      <configuration>
+        <webroots />
+      </configuration>
+    </facet>
+    <facet type="web" name="Web2">
       <configuration>
         <descriptors>
           <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/../../../../Presentation/gradle_web/src/main/webapp/WEB-INF/web.xml" />
@@ -21,9 +29,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="Library-Business_main" />
+    <orderEntry type="module" module-name="Business_main" />
     <orderEntry type="module" module-name="Data_main" />
-    <orderEntry type="module" module-name="Library-Model_main" />
+    <orderEntry type="module" module-name="Model_main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-configuration-processor:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.hibernate:hibernate-validator:5.3.6.Final" level="project" />

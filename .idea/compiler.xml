@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
+      <module name="Business_main" target="1.8" />
       <module name="Business_test" target="1.8" />
       <module name="Data_main" target="1.8" />
       <module name="Data_test" target="1.8" />
@@ -27,6 +28,8 @@
       <module name="Library-Model_test" target="1.8" />
       <module name="Library_main" target="1.8" />
       <module name="Library_test" target="1.8" />
+      <module name="Model_main" target="1.8" />
+      <module name="Model_test" target="1.8" />
       <module name="Presentation-gradle_root-gradle_web_main" target="1.8" />
       <module name="Presentation-gradle_root-gradle_web_test" target="1.8" />
       <module name="Presentation-gradle_web_main" target="1.8" />
