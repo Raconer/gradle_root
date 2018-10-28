@@ -1,5 +1,7 @@
     $(document).ready(function() {
-      /*  alert("tttt");*/
+        $("img").click(function(){
+            alert("이미지 눌렀따 : " + $(this).attr("id"))
+        });
     });
 
     $(function(){
