@@ -1,0 +1,6 @@
+group 'com.multi.gradle.module'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.7.0'
+}

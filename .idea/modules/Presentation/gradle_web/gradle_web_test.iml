@@ -7,17 +7,22 @@
     <facet type="web" name="Web">
       <configuration>
         <webroots />
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output-test url="file://$MODULE_DIR$/../../../../Presentation/gradle_web/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../../Presentation/gradle_web/src/test" />
+    <content url="file://$MODULE_DIR$/../../../../Presentation/gradle_web/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../../../Presentation/gradle_web/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../../Presentation/gradle_web/src/test/resources" type="java-test-resource" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="gradle_web_main" />
     <orderEntry type="module" module-name="Business_main" />
+    <orderEntry type="module" module-name="Core_main" />
     <orderEntry type="module" module-name="Data_main" />
     <orderEntry type="module" module-name="Model_main" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:1.5.9.RELEASE" level="project" />
@@ -31,6 +36,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:1.5.9.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.5.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: io.jsonwebtoken:jjwt:0.7.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.8.10" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:4.3.13.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-web:4.3.13.RELEASE" level="project" />

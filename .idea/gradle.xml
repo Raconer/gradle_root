@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Library/Business" />
+            <option value="$PROJECT_DIR$/Library/Core" />
             <option value="$PROJECT_DIR$/Library/Data" />
             <option value="$PROJECT_DIR$/Library/Model" />
             <option value="$PROJECT_DIR$/Presentation/gradle_web" />

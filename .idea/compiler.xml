@@ -4,6 +4,8 @@
     <bytecodeTargetLevel>
       <module name="Business_main" target="1.8" />
       <module name="Business_test" target="1.8" />
+      <module name="Core_main" target="1.8" />
+      <module name="Core_test" target="1.8" />
       <module name="Data_main" target="1.8" />
       <module name="Data_test" target="1.8" />
       <module name="gradle_root-Business_main" target="1.8" />

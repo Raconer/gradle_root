@@ -18,7 +18,7 @@ buildscript {
 mainClassName = "com.multi.gradle.module.web.WebApplication"
 
 dependencies {
-    compile project(":Business")
+    compile project(":Business"), project(":Core")
     /**
      * Spring 설정및 tomcat 설정
      **/

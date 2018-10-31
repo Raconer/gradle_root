@@ -21,7 +21,7 @@ dependencies {
 
     // My Sql use gradle
     compile('mysql:mysql-connector-java:6.0.5')
-
+    
 }
 
 

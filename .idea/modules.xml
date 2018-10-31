@@ -5,6 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Business/Business.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Business/Business.iml" group="Business" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Business/Business_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Business/Business_main.iml" group="Business" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Business/Business_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Business/Business_test.iml" group="Business" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Core.iml" filepath="$PROJECT_DIR$/.idea/modules/Core.iml" group="Core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Core/Core_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Core/Core_main.iml" group="Core" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Core/Core_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Core/Core_test.iml" group="Core" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Data/Data.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Data/Data.iml" group="Data" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Data/Data_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Data/Data_main.iml" group="Data" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Library/Data/Data_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Library/Data/Data_test.iml" group="Data" />
