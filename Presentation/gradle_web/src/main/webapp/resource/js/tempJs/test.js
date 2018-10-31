@@ -18,4 +18,14 @@
         /*$( "img" ).bind( "contextMenu", function () {
             alert("tt4");
         });*/
+        // Web View Long Press
+        var timer = 0;
+        $('#viewWrap .postBox .imgArea img').on("mousedown", function () {
+            var src = $(this).get(0).currentSrc;
+            timer = setTimeout(function () {
+            // sendMessageToApp(imgLongPress(src));
+            }, 2000);
+        }).on("mouseup mouseleave", function () {
+            clearTimeout(timer);
+        });
     });
