@@ -29,7 +29,7 @@ import java.util.Date;
  */
 @Service
 public class Token {
-    Date expire = new Date(new Date().getTime() + 3000);
+    Date expire = new Date(new Date().getTime() + 3000000);
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     /***
      *  1. conToken     : 토큰생성

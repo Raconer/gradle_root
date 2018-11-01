@@ -13,8 +13,10 @@ public class WebApplication  {
     public static void main(String[] args){
        SpringApplication.run(WebApplication.class, args);
 
-       /* SpringApplicationBuilder builder = new SpringApplicationBuilder(WebApplication.class);
+       /*
+       SpringApplicationBuilder builder = new SpringApplicationBuilder(WebApplication.class);
         builder.headless(false);
-        ConfigurableApplicationContext context = builder.run(args);*/
+        ConfigurableApplicationContext context = builder.run(args);
+        */
     }
 }

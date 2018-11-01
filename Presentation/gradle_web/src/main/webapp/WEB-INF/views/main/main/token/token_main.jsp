@@ -9,7 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <div class="contain">
-    <div align="center">
+    <div class="box">
         <input type="text" size="70"> <button type="button">token 생성</button>
     </div>
 </div>

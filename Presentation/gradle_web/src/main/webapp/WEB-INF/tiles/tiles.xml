@@ -13,8 +13,8 @@
     </definition>
     <!-- I 레이아웃 템플릿 정의-->
     <definition name="center_layout" template="/WEB-INF/views/main/layout/center_layout.jsp">
-        <put-attribute name="header" value="/WEB-INF/views/main/side/I/center_header.jsp"/>
-        <put-attribute name="footer" value="/WEB-INF/views/main/side/I/center_footer.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/views/main/side/center/center_header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/main/side/center/center_footer.jsp"/>
     </definition>
 
     <definition name="main" extends="default_layout">
