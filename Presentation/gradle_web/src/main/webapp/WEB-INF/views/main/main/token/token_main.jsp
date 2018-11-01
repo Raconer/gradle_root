@@ -8,5 +8,9 @@
   Time: 오후 5:17
   To change this template use File | Settings | File Templates.
 --%>
+<div class="contain">
+    <div align="center">
+        <input type="text" size="70"> <button type="button">token 생성</button>
+    </div>
+</div>
 
-<input type="text"> <button type="button">token 생성</button>

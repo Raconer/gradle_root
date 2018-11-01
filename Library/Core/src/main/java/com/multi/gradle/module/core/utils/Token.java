@@ -1,6 +1,7 @@
 package com.multi.gradle.module.core.utils;
 
 import io.jsonwebtoken.*;
+import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
@@ -26,9 +27,10 @@ import java.util.Date;
  하단 try catch 문과 비슷하다
  assert Jwts.parser().setSigningKey(key).parseClaimsJws(jws).getBody().getSubject().equals("Joe");
  */
+@Service
 public class Token {
-    static Date expire = new Date(new Date().getTime() + 3000);
-    static SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    Date expire = new Date(new Date().getTime() + 3000);
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     /***
      *  1. conToken     : 토큰생성
      *  2. chkToken     : 토큰 사용 체크
@@ -39,7 +41,7 @@ public class Token {
     /**
       * 토큰 생성
       **/
-    public static String conToken() {
+    public String conToken() {
         String jwt = "";
 
         System.out.println(sdf.format(expire));
@@ -68,7 +70,7 @@ public class Token {
     /**
       * 토큰 사용 체크
       **/
-    public static boolean chkToken(String token){
+    public boolean chkToken(String token){
 
         String jwt = token;
 
@@ -111,7 +113,7 @@ public class Token {
     /**
       * 토큰 갱신
       **/
-    public static String refreshToken(String token){
+    public String refreshToken(String token){
         if(!chkToken(token)){
             return "";
         }
@@ -127,7 +129,7 @@ public class Token {
     /**
       * 토큰 파기
       **/
-    public static String expireToken(String token){
+    public String expireToken(String token){
 
         Date date = new Date();
         System.out.println("expired Expired" + sdf.format(date));
@@ -139,7 +141,7 @@ public class Token {
     /**
       * 토큰 기간 변경
       **/
-    private static String expiredChgToken(String token, Date date){
+    private String expiredChgToken(String token, Date date){
 
         String refreshToken = "";
 
@@ -161,7 +163,7 @@ public class Token {
     /**
       * 토큰 상세 데이터 String 으로 변환
       **/
-    private static String tokenData(Jws<Claims> claims){
+    private String tokenData(Jws<Claims> claims){
 
         String scope = claims.getBody().toString();
 
@@ -171,7 +173,7 @@ public class Token {
     /**
       * 토큰 상세 데이터를 Claims화
       **/
-    private static Claims getAllClaimsFromToken(String token) throws Exception{
+    private Claims getAllClaimsFromToken(String token) throws Exception{
         return Jwts.parser()
                     .setSigningKey("secret".getBytes("UTF-8"))
                     .parseClaimsJws(token)
