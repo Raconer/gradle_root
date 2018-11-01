@@ -7,18 +7,29 @@
 <tiles-definitions>
     <!-- 기본 레이아웃 템플릿 정의-->
     <definition name="default_layout" template="/WEB-INF/views/main/layout/default_layout.jsp">
-        <put-attribute name="header" value="/WEB-INF/views/main/side/header.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/views/main/side/default/default_header.jsp"/>
         <put-attribute name="content" value=""/>
-        <put-attribute name="footer" value="/WEB-INF/views/main/side/footer.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/main/side/default/default_footer.jsp"/>
+    </definition>
+    <!-- I 레이아웃 템플릿 정의-->
+    <definition name="center_layout" template="/WEB-INF/views/main/layout/center_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/main/side/I/center_header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/views/main/side/I/center_footer.jsp"/>
     </definition>
 
     <definition name="main" extends="default_layout">
         <put-attribute name="title" value="Main Title"/>
-        <put-attribute name="content" value="/WEB-INF/views/main/main/main.jsp"/>
+        <put-attribute name="content" value="/WEB-INF/views/main/main/default/default_main.jsp"/>
     </definition>
 
     <definition name="test" extends="default_layout">
         <put-attribute name="title" value="Test Title"/>
         <put-attribute name="content" value="/WEB-INF/views/main/test/test.jsp"/>
     </definition>
+
+    <definition name="token" extends="center_layout">
+        <put-attribute name="title" value="token_test"/>
+        <put-attribute name="content" value="/WEB-INF/views/main/main/token/token_main.jsp"/>
+     </definition>
+
 </tiles-definitions>

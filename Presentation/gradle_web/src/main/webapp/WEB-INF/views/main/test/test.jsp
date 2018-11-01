@@ -8,14 +8,11 @@
   Time: 오후 5:55
   To change this template use File | Settings | File Templates.
 --%>
-${token}
-${listCnt}
-<%--<c:forEach var="i" begin="1" end="10" step="1">
 
+<%--<c:forEach var="i" begin="1" end="10" step="1">
     <a>
         <img src="https://t1.daumcdn.net/cfile/tistory/99F56B475BBCCBED19"  id="11${i}"  />
     </a>
-
 </c:forEach>--%>
 
 

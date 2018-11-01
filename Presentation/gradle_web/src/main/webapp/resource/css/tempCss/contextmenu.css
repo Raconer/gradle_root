@@ -1,3 +1,16 @@
+
+/* Web View Long press Menu block*/
+img{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/*
 .show {
     z-index:1000;
     position: absolute;
@@ -16,4 +29,4 @@
 
 .show li{ list-style: none; }
 .show a { border: 0 !important; text-decoration: none; }
-.show a:hover { text-decoration: underline !important; }
+.show a:hover { text-decoration: underline !important; }*/

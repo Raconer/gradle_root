@@ -19,14 +19,9 @@ public class MainController {
 
     @GetMapping("/")
     public String test(Model model){
-        System.out.println("--------------------------------------");
-        String token = Token.conToken();
-        System.out.println("token : " + token);
-        System.out.println("--------------------------------------");
-        model.addAttribute("token",token);
-        model.addAttribute("listCnt", mainService.getListCnt());
         return "test";
     }
+
     @GetMapping("/main")
     public String main(Model model){
 
