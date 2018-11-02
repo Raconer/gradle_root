@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     // Web View Long Press
     var timer = 0;
     $('img').bind("touchstart", function () {

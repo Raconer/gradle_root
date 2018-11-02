@@ -48,7 +48,7 @@ subprojects {
 
     dependencies {
         // Spring boot 설정
-        // Starter 란 Spring의전 송과 설정을 자동화 해주는 모듈을 뜻한다.
+        // Starter 란 Spring의 전송과 설정을 자동화 해주는 모듈을 뜻한다.
         compile("org.springframework.boot:spring-boot-starter-web:${rootProject.springBootVersion}")
         compile("org.springframework.boot:spring-boot-configuration-processor:${rootProject.springBootVersion}")
         compile 'org.hibernate:hibernate-validator'

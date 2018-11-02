@@ -1,17 +1,22 @@
 /**
- table : <table> 과 같음
- table-row : <tr> 처럼 가로 줄을 그음
- table-cell : <td>
- table-caption : <caption>
- table-column : <col>
+ table              : <table> 과 같음
+ table-row          : <tr> 처럼 가로 줄을 그음
+ table-cell         : <td>
+ table-caption      : <caption>
+ table-column       : <col>
  table-column-group : <colgroup>
  table-header-group : <thead>
- table-row-group :  <tbody>
+ table-row-group    :  <tbody>
  table-footer-group : <tfoot>
- inline-table : 인라인 블록 안에 테이블을 만듬
+ inline-table       : 인라인 블록 안에 테이블을 만듬
  */
 
-body{ margin : 0px; padding: 0px; }
+body{ margin : 0px; padding: 0px;}
 
-.center { width : 800px; height: 100%; margin: 0 auto; background-color: #e0e2e1;}
-.box{ width: 50%; height: 50%; margin :0 auto;  background-color: #313456;}
+.center { width : 800px; height: 100%; margin: 0 auto; background-color: #e0e2e1; vertical-align: middle;}
+.box{ width: 70%; height: 50%; margin :0 auto;  background-color: #313456; }
+
+.max_size  { width: 90% }
+.half_size { width: 50% }
+
+.temp { position: absolute; }
