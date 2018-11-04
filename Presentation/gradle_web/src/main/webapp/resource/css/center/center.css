@@ -20,3 +20,8 @@ body{ margin : 0px; padding: 0px;}
 .half_size { width: 50% }
 
 .temp { position: absolute; }
+
+/*textArea*/
+.tArea_fixing {
+    resize: none;
+}
