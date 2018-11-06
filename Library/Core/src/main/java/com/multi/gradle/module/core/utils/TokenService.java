@@ -2,6 +2,7 @@ package com.multi.gradle.module.core.utils;
 
 import io.jsonwebtoken.*;
 import org.springframework.beans.NullValueInNestedPathException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
@@ -32,6 +33,8 @@ import java.util.Date;
 public class TokenService {
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+    @Value("${token.expire.time}")
+    private long expireTime;
     /***
      *  1. conToken     : 토큰생성
      *  2. chkToken     : 토큰 사용 체크
@@ -43,7 +46,7 @@ public class TokenService {
       * 토큰 생성
       **/
     public String conToken() {
-        Date expire = new Date(new Date().getTime() + 3000000);
+        Date expire = new Date(new Date().getTime() + expireTime);
         String jwt = "";
 
         System.out.println(sdf.format(expire));
@@ -131,7 +134,7 @@ public class TokenService {
         if(chkToken(token) != null){
             return "";
         }
-        Date expire = new Date(new Date().getTime() + 3000000);
+        Date expire = new Date(new Date().getTime() + expireTime);
 
         System.out.println("refresh Expired" + sdf.format(expire));
 
