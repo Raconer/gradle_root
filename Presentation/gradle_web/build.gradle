@@ -32,6 +32,8 @@ dependencies {
     compile("javax.servlet:jstl:${rootProject.jstlVersion}")
     testCompile("org.springframework.boot:spring-boot-starter-test:${rootProject.springBootVersion}")
 
+    // Security를 위한 dependency
+    compile "org.springframework.boot:spring-boot-starter-security:${rootProject.springBootVersion}"
 
 }
 

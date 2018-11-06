@@ -1,8 +1,10 @@
 package com.multi.gradle.module.web;
 
+import com.multi.gradle.module.web.config.WebSecurityConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
  * Created by dhokim on  2018-10-19

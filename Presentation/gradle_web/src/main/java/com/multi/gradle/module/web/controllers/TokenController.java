@@ -1,6 +1,6 @@
 package com.multi.gradle.module.web.controllers;
 
-import com.multi.gradle.module.core.utils.Token;
+import com.multi.gradle.module.core.utils.TokenService;
 import com.multi.gradle.module.model.Json.JsonResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class TokenController {
 
     @Autowired
-    Token tokenService;
+    TokenService tokenService;
 
     @GetMapping("/token")
     public String token(){
@@ -52,7 +52,7 @@ public class TokenController {
         json.setMessage("faild");
         json.setResult(false);
 
-        boolean chkToken = tokenService.chkToken(token);
+        boolean chkToken = tokenService.chkToken(token) != null? true : false;
         System.out.println("Make Token : " + (chkToken ? "사용 가능 토큰":"사용 불가능 토큰"));
 
         json.setData(token);

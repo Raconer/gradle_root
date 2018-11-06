@@ -1,6 +1,7 @@
 package com.multi.gradle.module.core.utils;
 
 import io.jsonwebtoken.*;
+import org.springframework.beans.NullValueInNestedPathException;
 import org.springframework.stereotype.Service;
 
 import java.io.UnsupportedEncodingException;
@@ -15,27 +16,27 @@ import java.util.Date;
  PrematureJwtException   : 접근이 허용되기 전인 JWT가 수신된 경우
  SignatureException      : 시그니처 연산이 실패 하거나, JWT의 시그너처 검증이 실패한 경우
  UnsupportedJwtException : 수신한 JWT의 형식이 애플리케이션에서 원하는 형식과 맞지 않은 경우
- 예를 들면, 암호화된 JWT를 사용하는 애플리케이션에 암호화되지 않은 JWT가 전달되는 경우에 이예외 발생
+                            예를 들면, 암호화된 JWT를 사용하는 애플리케이션에 암호화되지 않은 JWT가 전달되는 경우에 이예외 발생
  */
 
 /**
- assert 불리언식; or assert 불리언식:수식;
- ex) assert i < 0; or assert age > 0 : "나이는 음수가 될 수 없습니다:"+age;
- i가 0보다 클경우 AssertionError발생
- age가 0보다 작을 경우 AssertionError발생, 그때 AssertionError의 예외 메시지는 "나이는 음수가 될수 없습니다:age" 출력
- 따라서 assert 의 불리언 식이 false가 생겼을시 예외 발생
- 하단 try catch 문과 비슷하다
- assert Jwts.parser().setSigningKey(key).parseClaimsJws(jws).getBody().getSubject().equals("Joe");
+    assert 불리언식; or assert 불리언식:수식;
+    ex) assert i < 0; or assert age > 0 : "나이는 음수가 될 수 없습니다:"+age;
+        i가 0보다 클경우 AssertionError발생
+        age가 0보다 작을 경우 AssertionError발생, 그때 AssertionError의 예외 메시지는 "나이는 음수가 될수 없습니다:age" 출력
+        따라서 assert 의 불리언 식이 false가 생겼을시 예외 발생
+        하단 try catch 문과 비슷하다
+        assert Jwts.parser().setSigningKey(key).parseClaimsJws(jws).getBody().getSubject().equals("Joe");
  */
 @Service
-public class Token {
+public class TokenService {
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     /***
      *  1. conToken     : 토큰생성
      *  2. chkToken     : 토큰 사용 체크
-     *  3. refreshToken : 토큰 갱신(기간 연장) _ 개발
-     *  4. expireToken  : 토큰 파기 _ 개발
+     *  3. refreshToken : 토큰 갱신(기간 연장)
+     *  4. expireToken  : 토큰 파기(토큰 현재 시간으로 수정)
      * */
 
     /**
@@ -71,51 +72,63 @@ public class Token {
     /**
       * 토큰 사용 체크
       **/
-    public boolean chkToken(String token){
+    public String chkToken(String token){
 
         String jwt = token;
-
+        String userData = "";
         try {
             Jws<Claims> claims = Jwts.parser()
                             .setSigningKey("secret".getBytes("UTF-8"))
                             .parseClaimsJws(jwt);// 서명 오류를 구별한다.
-
-            System.out.println("Token Check Data : " + tokenData(claims));
+            userData = tokenData(claims);
+            System.out.println("Token Check Data : " + userData);
             // assertEquals(scope, "self groups/admins");
         }catch (ExpiredJwtException e){ // ClaimJwtException 같은 Exception
             System.out.println("토큰 기간이 만료 되었습니다");
             //e.getMessage();
-            return false;
+            return null;
         }catch (MalformedJwtException e){
             System.out.println("서명에 문제가 있습니다_3");
             //e.getMessage();
-            return false;
+            return null;
         }catch (PrematureJwtException e){ // ClaimJwtException 같은 Exception
             System.out.println("서명에 문제가 있습니다_4");
             //e.getMessage();
-            return false;
+            return null;
         }catch (SignatureException e){
             System.out.println("signingKey 가 다릅니다");
             //e.getMessage();
-            return false;
+            return null;
         }catch (UnsupportedJwtException e){
             System.out.println("서명에 문제가 있습니다_6");
             //e.getMessage();
-            return false;
-        }catch (Exception e){
+            return null;
+        }catch (NullPointerException e){
             System.out.println("서명에 문제가 있습니다_7");
             //e.getMessage();
-            return false;
+            return null;
+        }catch (NullValueInNestedPathException e){
+            System.out.println("서명에 문제가 있습니다_8");
+            //e.getMessage();
+            return null;
+        }catch (JwtException e){
+            System.out.println("서명에 문제가 있습니다_9");
+            //e.getMessage();
+            return null;
+        }catch (Exception e){
+            System.out.println("서명에 문제가 있습니다_10");
+            //e.getMessage();
+            return null;
         }
 
-        return true;
+        return userData;
     }
 
     /**
       * 토큰 갱신
       **/
     public String refreshToken(String token){
-        if(!chkToken(token)){
+        if(chkToken(token) != null){
             return "";
         }
         Date expire = new Date(new Date().getTime() + 3000000);
@@ -164,7 +177,7 @@ public class Token {
     /**
       * 토큰 상세 데이터 String 으로 변환
       **/
-    private String tokenData(Jws<Claims> claims){
+    public String tokenData(Jws<Claims> claims){
 
         String scope = claims.getBody().toString();
 
@@ -174,7 +187,7 @@ public class Token {
     /**
       * 토큰 상세 데이터를 Claims화
       **/
-    private Claims getAllClaimsFromToken(String token) throws Exception{
+    public Claims getAllClaimsFromToken(String token) throws Exception{
         return Jwts.parser()
                     .setSigningKey("secret".getBytes("UTF-8"))
                     .parseClaimsJws(token)

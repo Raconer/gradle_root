@@ -8,7 +8,7 @@
   Time: 오후 5:17
   To change this template use File | Settings | File Templates.
 --%>
-<div style="width: 100%; background-color:red;">
+<div style="width: 100%;">
     <textarea cols="40" rows="7" id="newToken" class="tArea_fixing"></textarea><input type="button" class="temp" id="tokenGenerate" value="token 생성"/>
 </div>
 
