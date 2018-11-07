@@ -1,14 +1,23 @@
 package com.multi.gradle.module.web.config;
 
+import com.multi.gradle.module.core.utils.TokenService;
 import com.multi.gradle.module.web.security.TokenAuthenticationFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import static java.util.Arrays.asList;
 
 @Configuration
 @EnableWebSecurity  // @EnableWebSecurity 웹보안을 활성화 한다. 하지만 그자체로는 유용하지 않고,
@@ -16,29 +25,43 @@ import org.springframework.security.web.authentication.www.BasicAuthenticationFi
                     // 하지만 WebSebSecurityConfigurerAdapter를 확장하여 클래스를 설정하는 것이 가장 편하고 자주 쓰이는 방법이다.
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Bean // 액션시 Filter로 토큰 체크를 함
+    @Autowired
+    TokenService tokenService;
+
+  /*  @Bean // 액션시 Filter로 토큰 체크를 함
     public TokenAuthenticationFilter tokenAuthenticationFilter(){
+        System.out.println("토큰 Bean");
         return new TokenAuthenticationFilter();
     }
-
+*/
     @Override // Security Custom
     protected void configure(HttpSecurity http) throws Exception {
+        /**
+          * @보안필터체인
+          *  1. Authentication 로딩: SecurityContextPersistenceFilter
+          *  2. 로그아웃 요청 처리 : LogoutFilter
+          *  3. 인증 요청 처리     : UsernamePasswordAuthenticationFilter
+          *  4. 로그인 폼 출력     : DefaultLoginPageGenerationFilter
+          *  5. 임의 사용자 처리   : AnonymousAuthenticationfilter
+          *  6. 익셉션 처리        : ExceptionTranslationFilter
+          *  7. 접근 권한 검사     : FilterSecurityInterceptor
+          **/
+        // 이때는 생성자를 안 만들어도된다.
+        //http.antMatcher("/**").addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
-        http.addFilterBefore(tokenAuthenticationFilter(), BasicAuthenticationFilter.class);
+        http.antMatcher("/**").addFilterBefore(new TokenAuthenticationFilter(tokenService), UsernamePasswordAuthenticationFilter.class);
     }
-
-
-    @Override // Security Custom
+    /*@Override // Security Custom
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers(
                 HttpMethod.POST,
-                "/**"
+                "/"
         );
         web.ignoring().antMatchers(
                 HttpMethod.GET,
-                "/**"
+                "/"
         );
-    }
+    }*/
 }
 /**
   * @EnableWebSecurity

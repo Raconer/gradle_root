@@ -18,6 +18,7 @@ public class MainController {
 
     @GetMapping("/")
     public String test(Model model){
+        System.out.println("Main Controller test Method");
         return "test";
     }
 

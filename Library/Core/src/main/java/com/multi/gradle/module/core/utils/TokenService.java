@@ -5,6 +5,7 @@ import org.springframework.beans.NullValueInNestedPathException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -31,6 +32,9 @@ import java.util.Date;
  */
 @Service
 public class TokenService {
+
+    @Value("${jwt.header}")
+    private String AUTH_HEADER;
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
     @Value("${token.expire.time}")
@@ -196,5 +200,18 @@ public class TokenService {
                     .parseClaimsJws(token)
                     .getBody();
     }
+
+    // Header에서 토큰을 가져온다.
+    public String getToken(HttpServletRequest request){
+        String returnData = "";
+
+        String authHeader = request.getHeader(AUTH_HEADER);
+        if ( authHeader != null && authHeader.startsWith("Bearer ")) {
+            returnData = authHeader.substring(7);
+            return returnData;
+        }
+        return null;
+    }
+
 }
 
