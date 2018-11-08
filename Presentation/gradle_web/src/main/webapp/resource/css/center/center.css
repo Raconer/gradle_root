@@ -12,16 +12,13 @@
  */
 
 body{ margin : 0px; padding: 0px;}
+textarea {resize: none;}
 
-.center { width : 800px; height: 100%; margin: 0 auto; background-color: #e0e2e1; vertical-align: middle;}
 .box{ width: 70%; height: 50%; margin :0 auto;  background-color: #313456; }
 
-.max_size  { width: 90% }
-.half_size { width: 50% }
+.max_size  { width: 100%; display: table;}
+.half_size { width: 50%; }
 
-.temp { position: absolute; }
-
-/*textArea*/
-.tArea_fixing {
-    resize: none;
-}
+.center { width : 800px; height: 100%; margin: 0 auto; background-color: #e0e2e1;}
+.t_right { text-align: right; }
+.t_center { text-align: center; }

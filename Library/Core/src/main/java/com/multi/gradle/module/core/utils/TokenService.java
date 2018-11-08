@@ -135,7 +135,7 @@ public class TokenService {
       * 토큰 갱신
       **/
     public String refreshToken(String token){
-        if(chkToken(token) != null){
+        if(chkToken(token) == null){
             return "";
         }
         Date expire = new Date(new Date().getTime() + expireTime);

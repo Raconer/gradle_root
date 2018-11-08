@@ -47,9 +47,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
           *  7. 접근 권한 검사     : FilterSecurityInterceptor
           **/
         // 이때는 생성자를 안 만들어도된다.
-        //http.antMatcher("/**").addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
+        //http.antMatcher("/").addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 
-        http.antMatcher("/**").addFilterBefore(new TokenAuthenticationFilter(tokenService), UsernamePasswordAuthenticationFilter.class);
+        http.antMatcher("/").addFilterBefore(new TokenAuthenticationFilter(tokenService), UsernamePasswordAuthenticationFilter.class);
     }
     /*@Override // Security Custom
     public void configure(WebSecurity web) throws Exception {

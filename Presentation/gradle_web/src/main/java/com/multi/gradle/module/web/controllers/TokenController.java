@@ -4,10 +4,12 @@ import com.multi.gradle.module.core.utils.TokenService;
 import com.multi.gradle.module.model.Json.JsonResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class TokenController {
@@ -16,7 +18,21 @@ public class TokenController {
     TokenService tokenService;
 
     @GetMapping("/token")
-    public String token(){
+    public String token(HttpServletRequest request, Model model) {
+        Cookie[] cookies = request.getCookies();
+        String name = "";
+        String value = "";
+        if(cookies != null){
+            for(Cookie cookie : cookies){
+                if(cookie.getName().equals("jwt")){
+                    name = cookie.getName();
+                    value = cookie .getValue();
+                }
+            }
+        }
+        model.addAttribute("name", name);
+        model.addAttribute("value", value);
+
         return "token";
     }
 
@@ -28,7 +44,7 @@ public class TokenController {
     /** 토큰 생성 */
     @PostMapping("/token/generate")
     @ResponseBody
-    public JsonResponse generToken(){
+    public JsonResponse generToken(HttpServletResponse response){
         JsonResponse json = new JsonResponse();
         json.setMessage("faild");
         json.setResult(false);
@@ -36,10 +52,15 @@ public class TokenController {
         String token = tokenService.conToken();
         System.out.println("Make Token : " + token);
 
+        Cookie cookie = new Cookie("jwt", token);
+        cookie.setComment("사용자 토큰");
+        cookie.setMaxAge(60*60*24);
+        response.addCookie(cookie);
+
         json.setData(token);
         json.setMessage("sucess");
         json.setResult(true);
-        System.out.println("token generate controller end");
+
         return json;
     }
 
@@ -65,18 +86,17 @@ public class TokenController {
     /** Refresh 토큰 재생성*/
     @PostMapping("/token/refresh")
     @ResponseBody
-    public JsonResponse refreshToken(@RequestParam String token){
+    public JsonResponse refreshToken(@RequestParam("token") String token){
+        System.out.println("refresh start");
         JsonResponse json = new JsonResponse();
         json.setMessage("faild");
         json.setResult(false);
-
         token = tokenService.refreshToken(token);
         System.out.println("Refresh Token : " + token);
 
         json.setData(token);
         json.setMessage("sucess");
         json.setResult(true);
-
         return json;
     }
 

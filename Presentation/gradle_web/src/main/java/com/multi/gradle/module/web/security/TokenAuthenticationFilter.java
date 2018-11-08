@@ -17,7 +17,6 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         this.token = token;
     }
 
-
     // 필터가  favicon.ico 에서도 실행되니 초반 필터는 favicon.icon + x 이다.
     @Override // Filtering이 실행되는곳
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws ServletException, IOException {

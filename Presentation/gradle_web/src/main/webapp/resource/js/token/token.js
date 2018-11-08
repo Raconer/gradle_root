@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    console.log("111")
     // 토큰 생성
     $('#tokenGenerate').on('click', function () {
         $.ajax({
@@ -8,7 +7,6 @@ $(document).ready(function() {
             , contentType: "application/json; charset=UTF-8"
             , url:"/token/generate"
             , success : function (resData) {
-                console.log("Token Generate Sucess : " + resData.data);
                 $('#newToken').val(resData.data);
             }
             , error : function (resData) {
@@ -16,4 +14,23 @@ $(document).ready(function() {
             }
         })
     });
+
+    $('#tokenRefresh').on('click', function () {
+        var tokenData = $('#newToken').val();
+        var param = { token : tokenData }
+
+        console.log(param)
+        $.ajax({
+            type: "post"
+            , url:"/token/refresh"
+            , data: param
+            , dataType: "json"
+            , success : function (resData) {
+                $('#refreshToken').val(resData.data);
+            }
+            , error : function (resData) {
+                console.log("Token Generate Fail");
+            }
+        })
+    })
 });
