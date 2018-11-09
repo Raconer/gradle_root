@@ -10,15 +10,22 @@
  table-footer-group : <tfoot>
  inline-table       : 인라인 블록 안에 테이블을 만듬
  */
-
+/*기본*/
 body{ margin : 0px; padding: 0px;}
 textarea {resize: none;}
 
+/*형태*/
 .box{ width: 70%; height: 50%; margin :0 auto;  background-color: #313456; }
+.block_box { width: 250px; height: 250px; background-color: palegoldenrod; float: left; margin: 44% 8px; }
 
-.max_size  { width: 100%; display: table;}
+/*사이즈*/
+.max_size  { width: 100%;}
+.eigh_height { height: 80%}
 .half_size { width: 50%; }
 
+/*위치*/
 .center { width : 800px; height: 100%; margin: 0 auto; background-color: #e0e2e1;}
 .t_right { text-align: right; }
 .t_center { text-align: center; }
+
+

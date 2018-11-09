@@ -2,5 +2,8 @@ group 'com.multi.gradle.module'
 version '1.0-SNAPSHOT'
 
 dependencies {
+    // 토큰 dependency
     compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.7.0'
+    // 암호화
+    compile 'org.bouncycastle:bcprov-jdk15on:1.58'
 }

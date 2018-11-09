@@ -30,6 +30,11 @@
     <definition name="token" extends="center_layout">
         <put-attribute name="title" value="token_test"/>
         <put-attribute name="content" value="/WEB-INF/views/main/main/token/token_main.jsp"/>
-     </definition>
+    </definition>
+
+    <definition name="encryption" extends="center_layout">
+        <put-attribute name="title" value="token_test"/>
+        <put-attribute name="content" value="/WEB-INF/views/main/main/encryption/encryption_main.jsp"/>
+    </definition>
 
 </tiles-definitions>

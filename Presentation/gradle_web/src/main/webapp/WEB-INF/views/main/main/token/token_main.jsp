@@ -9,7 +9,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <div class="max_size t_right">
-    <textarea id="newToken" class="max_size" >${value}</textarea>
+    <textarea id="newToken" class="max_size">${value}</textarea>
     <input type="button" id="tokenGenerate" value="token 생성"/>
 </div>
 <div class="max_size t_center ">

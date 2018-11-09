@@ -9,6 +9,9 @@
 
 
 <script src="<c:url value="/resource/js/lib/jquery-3.3.1.min.js"/>"></script>
+<%--토큰--%>
 <script type="text/javascript" src="<c:url value="/resource/js/token/token.js"/> "></script>
+<%--암호화--%>
+<script type="text/javascript" src="<c:url value="/resource/js/encryption/encryption.js"/> "></script>
 
 
