@@ -33,4 +33,9 @@ $(document).ready(function() {
             }
         })
     })
+
+    $('#co').on('click',function () {
+        $.cookie('test','testeee');
+        alert("test");
+    })
 });

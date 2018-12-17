@@ -16,5 +16,6 @@
     <input type="button"  id="tokenRefresh"  style=" margin-bottom: 11px;"value="token 갱신"/>
 </div>
 <div class="max_size t_right">
-    <textarea id="refreshToken" class="max_size" ></textarea>
+    <%--<textarea id="refreshToken" class="max_size" ></textarea>--%>
+    <input type="button" id ="co" value="cookies">
 </div>
