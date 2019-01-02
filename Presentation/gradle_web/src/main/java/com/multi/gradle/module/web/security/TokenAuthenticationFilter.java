@@ -24,7 +24,7 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
         String authToken = token.getToken(request);
         if (authToken == null) {
             // Get username from token
-            System.out.println("token is null : " + request.getServletPath() );
+            System.out.println("token is null : " + request.getServletPath());
         }else{
             System.out.println("token is not null : " + request.getServletPath());
             String userData = "";

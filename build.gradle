@@ -9,7 +9,8 @@ apply plugin: 'java'
   **/
 // apply plugin: 'application'
 
-/**현재 프로젝트 그래들 설정*/
+/** 현재 프로젝트 그래들 설정*/
+/** 해당 클래스 경로내의 클래스들을 사용할수 있다.*/
 buildscript {
     ext {
         javaVersion = 1.8
@@ -50,7 +51,13 @@ subprojects {
         // Spring boot 설정
         // Starter 란 Spring의 전송과 설정을 자동화 해주는 모듈을 뜻한다.
         compile("org.springframework.boot:spring-boot-starter-web:${rootProject.springBootVersion}")
+
+        // MybatisMasterProperties의 @ConfigurationProperties(prefix = MybatisMasterProperties.PREFIX) 설정을 위해 사용된다.
+        // 다른 모듈에서 application.properties를 가져오기 위해 사용
         compile("org.springframework.boot:spring-boot-configuration-processor:${rootProject.springBootVersion}")
+
+        // 어노테이션으로 유효성 검사를 할수있다.
+        // ex) @NotEmpty
         compile 'org.hibernate:hibernate-validator'
 
     }

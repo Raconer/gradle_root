@@ -19,6 +19,18 @@ public class MainController {
     @GetMapping("/")
     public String test(Model model){
         System.out.println("Main Controller test Method");
+        String regexTest1 = "https://m.blog.naver.com/PostView.nhn?blogId=syung1104&logNo=220847918251&proxyReferer=https%3A%2F%2Fwww.google.com%2F";
+        String regexTest2 = "http://m.blog.naver.com/PostView.nhn?blogId=syung1104&logNo=220847918251&proxyReferer=https%3A%2F%2Fwww.google.com%2F";
+        String regexTest3 = "htt://m.blog.naver.com/PostView.nhn?blogId=syung1104&logNo=220847918251&proxyReferer=https%3A%2F%2Fwww.google.com%2F";
+        String regexTest4 = "https://m.blog.naver.https://.com/PostView.nhn?blogId=syung1104&logNo=220847918251&proxyReferer=https%3A%2F%2Fwww.google.com%2F";
+        String regexTest5 = "ttps://m.blog.naver.com/PostView.nhn?blogId=syung1104&logNo=220847918251&proxyReferer=https%3A%2F%2Fwww.google.com%2F";
+        String isRegex = "http[s]?://(.*)";
+        System.out.println("isRegex_1 : " + regexTest1.matches(isRegex));
+        System.out.println("isRegex_2 : " + regexTest2.matches(isRegex));
+        System.out.println("isRegex_3 : " + regexTest3.matches(isRegex));
+        System.out.println("isRegex_4 : " + regexTest4.matches(isRegex));
+        System.out.println("isRegex_5 : " + regexTest5.matches(isRegex));
+
         return "test";
     }
 
