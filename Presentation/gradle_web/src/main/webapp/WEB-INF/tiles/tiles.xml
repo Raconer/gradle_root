@@ -37,4 +37,9 @@
         <put-attribute name="content" value="/WEB-INF/views/main/main/encryption/encryption_main.jsp"/>
     </definition>
 
+    <definition name="error" extends="center_layout">
+        <put-attribute name="title" value="token_test"/>
+        <put-attribute name="content" value="ERRORRRRRRRRRR!!!@!@!@!"/>
+    </definition>
+
 </tiles-definitions>

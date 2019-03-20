@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
  * Created by dhokim on  2018-10-19
  */
 @SpringBootApplication
-@ComponentScan({"com.multi.gradle.module.web", "com.multi.gradle.module.business", "com.multi.gradle.module.core"})
+@ComponentScan({"com.multi.gradle.module.web", "com.multi.gradle.module.business", "com.multi.gradle.module.core", "com.multi.gradle.module.data"})
 public class WebApplication  {
     public static void main(String[] args){
        SpringApplication.run(WebApplication.class, args);

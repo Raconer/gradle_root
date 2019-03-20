@@ -41,6 +41,8 @@
       <module name="Presentation_test" target="1.8" />
       <module name="src_main" target="1.8" />
       <module name="src_test" target="1.8" />
+      <module name="test_main" target="1.8" />
+      <module name="test_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
