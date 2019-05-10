@@ -7,3 +7,7 @@
 --%>
 
 ${listCnt}
+<form action="/main" >
+
+    <input type="submit" name="trwa">
+</form>

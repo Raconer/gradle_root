@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * Created by dhokim on  2018-10-19
@@ -38,6 +39,12 @@ public class MainController {
     public String main(Model model){
 
         model.addAttribute("listCnt", mainService.getListCnt());
+        return "main";
+    }
+
+    @PostMapping("/main/test")
+    public String mainTest(){
+
         return "main";
     }
 }
