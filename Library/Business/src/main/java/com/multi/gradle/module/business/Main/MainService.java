@@ -16,4 +16,6 @@ public class MainService {
     public Integer getListCnt(){
         return listMapper.totalCount();
     }
+
+    public Integer getTest(){return 123456;}
 }

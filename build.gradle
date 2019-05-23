@@ -15,7 +15,7 @@ buildscript {
     ext {
         javaVersion = 1.8
         jstlVersion = 1.2
-        springBootVersion = "1.5.9.RELEASE"
+        springBootVersion = "2.0.6.RELEASE"
     }
     repositories {
         mavenCentral()
@@ -27,6 +27,7 @@ buildscript {
          classpath("org.springframework.boot:spring-boot-gradle-plugin:${rootProject.springBootVersion}")
     }
 }
+
 
 /** gradle_root 프로젝트에 속해있는 모듈 기본 gradle 셋팅*/
 subprojects {
@@ -58,7 +59,7 @@ subprojects {
 
         // 어노테이션으로 유효성 검사를 할수있다.
         // ex) @NotEmpty
-        compile 'org.hibernate:hibernate-validator'
+        /*compile 'org.hibernate:hibernate-validator:'*/
 
     }
 }

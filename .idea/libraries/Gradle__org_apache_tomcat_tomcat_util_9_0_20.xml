@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.tomcat:tomcat-util:9.0.20">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-util/9.0.20/5f96d82d99c31c939cc74889248996878588c9bc/tomcat-util-9.0.20.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/tomcat-util/9.0.20/d814ccf8971f02b8a87b2ee4a5af94d9998d96fd/tomcat-util-9.0.20-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

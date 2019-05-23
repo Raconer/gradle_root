@@ -33,7 +33,7 @@ public class MainController {
         System.out.println("isRegex_3 : " + regexTest3.matches(isRegex));
         System.out.println("isRegex_4 : " + regexTest4.matches(isRegex));
         System.out.println("isRegex_5 : " + regexTest5.matches(isRegex));
-
+        System.out.println("과연 될것인가.? : "+mainService.getTest());
         return "test";
     }
 

@@ -1,9 +1,10 @@
 group 'com.multi.gradle.module'
 version '1.0-SNAPSHOT'
 
-bootRepackage{
-    enabled = false
-}
+//bootJar 비활성화시
+bootJar.enabled = false
+jar.enabled = true
+
 
 dependencies {
     compile project(":Data")

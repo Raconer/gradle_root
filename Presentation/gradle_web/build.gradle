@@ -25,9 +25,13 @@ dependencies {
     compile("org.springframework.boot:spring-boot-devtools:${rootProject.springBootVersion}")
     compile("org.springframework.boot:spring-boot-starter-tomcat:${rootProject.springBootVersion}")
     //  Get, Post Mapping 을 찾아낸다
-    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
+    // https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-jasper
+    compile group: 'org.apache.tomcat', name: 'tomcat-jasper', version: '9.0.20'
+
     // tiles 설정
-    compile("org.apache.tiles:tiles-jsp:3.0.8")
+    // https://mvnrepository.com/artifact/org.apache.tiles/tiles-jsp
+    compile group: 'org.apache.tiles', name: 'tiles-jsp', version: '3.0.8'
+
     // tiles.xml을 찾아 갈때 필요 하다
     compile("javax.servlet:jstl:${rootProject.jstlVersion}")
     testCompile("org.springframework.boot:spring-boot-starter-test:${rootProject.springBootVersion}")
